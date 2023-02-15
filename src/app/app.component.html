@@ -1,0 +1,76 @@
+<button (click)="numPlus($event)">{{ num }}</button>
+
+<button (click)="toggle()">toggle p</button>
+<p *ngIf="isShowing">
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima quasi eius
+  sit dolor odit obcaecati odio, dolore nihil repellat et totam possimus
+  adipisci molestias assumenda repudiandae commodi, voluptatem est a?
+</p>
+
+<div class="container">
+  <div class="form-container">
+    <div class="left-form">
+      <div class="form-step">
+        <!--  -->
+        <div *ngFor="let step of stepArr" class="container-text">
+          <h3 class="active">{{ step.stepNum }}</h3>
+          <p>
+            step {{ step.stepNum }} <br />
+            <span>{{ step.stepTxt }}</span>
+          </p>
+        </div>
+
+        <!-- <div class="container-text">
+          <h3>2</h3>
+          <p>
+            Step 2 <br />
+            <span>SELECT PLAN</span>
+          </p>
+        </div>
+
+        <div class="container-text">
+          <h3>4</h3>
+          <p>
+            Step 3 <br />
+            <span>ADD-ONS</span>
+          </p>
+        </div>
+
+        <div class="container-text">
+          <h3>4</h3>
+          <p>
+            Step 4 <br />
+            <span>SUMMARY</span>
+          </p>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="right-form">
+      <form action="">
+        <div class="title">
+          <h1>persolan info</h1>
+          <p>please provide your name, email addres, and phone number</p>
+        </div>
+
+        <div class="input">
+          <!-- <h5>name</h5> -->
+          <label for="name">name</label>
+          <input type="text" id="name" />
+        </div>
+
+        <div class="input">
+          <label for="Email">Email</label>
+          <input type="text" id="Email" />
+        </div>
+
+        <div class="input">
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" placeholder="e.g +1 234" />
+        </div>
+
+        <button>Next Step</button>
+      </form>
+    </div>
+  </div>
+</div>
